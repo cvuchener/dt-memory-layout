@@ -1,0 +1,428 @@
+<memory-layout>
+	<section name="addresses">
+		<global name="cur_year_tick" object="cur_year_tick" />
+		<global name="current_year" object="cur_year" />
+		<global name="dwarf_civ_index" object="ui" member="civ_id" />
+		<global name="dwarf_race_index" object="ui" member="race_id" />
+		<global name="fortress_entity" object="ui" member="main.fortress_entity" />
+		<global name="historical_entities_vector" object="world" member="entities.all" />
+		<global name="creature_vector" object="world" member="units.all" />
+		<global name="active_creature_vector" object="world" member="units.active" />
+		<global name="weapons_vector" object="world" member="items.other" index="WEAPON" />
+		<global name="shields_vector" object="world" member="items.other" index="SHIELD" />
+		<global name="quivers_vector" object="world" member="items.other" index="QUIVER" />
+		<global name="crutches_vector" object="world" member="items.other" index="CRUTCH" />
+		<global name="backpacks_vector" object="world" member="items.other" index="BACKPACK" />
+		<global name="ammo_vector" object="world" member="items.other" index="AMMO" />
+		<global name="flasks_vector" object="world" member="items.other" index="FLASK" />
+		<global name="pants_vector" object="world" member="items.other" index="PANTS" />
+		<global name="armor_vector" object="world" member="items.other" index="ARMOR" />
+		<global name="shoes_vector" object="world" member="items.other" index="SHOES" />
+		<global name="helms_vector" object="world" member="items.other" index="HELM" />
+		<global name="gloves_vector" object="world" member="items.other" index="GLOVES" />
+		<global name="artifacts_vector" object="world" member="artifacts.all" />
+		<global name="squad_vector" object="world" member="squads.all" />
+		<global name="activities_vector" object="world" member="activities.all" />
+		<global name="fake_identities_vector" object="world" member="identities.all" />
+		<global name="poetic_forms_vector" object="world" member="poetic_forms.all" />
+		<global name="musical_forms_vector" object="world" member="musical_forms.all" />
+		<global name="dance_forms_vector" object="world" member="dance_forms.all" />
+		<global name="occupations_vector" object="world" member="occupations.all" />
+		<global name="world_data" object="world" member="world_data" />
+		<global name="material_templates_vector" object="world" member="raws.material_templates" />
+		<global name="inorganics_vector" object="world" member="raws.inorganics" />
+		<global name="plants_vector" object="world" member="raws.plants.all" />
+		<global name="races_vector" object="world" member="raws.creatures.all" />
+		<global name="itemdef_weapons_vector" object="world" member="raws.itemdefs.weapons" />
+		<global name="itemdef_trap_vector" object="world" member="raws.itemdefs.trapcomps" />
+		<global name="itemdef_toy_vector" object="world" member="raws.itemdefs.toys" />
+		<global name="itemdef_tool_vector" object="world" member="raws.itemdefs.tools" />
+		<global name="itemdef_instrument_vector" object="world" member="raws.itemdefs.instruments" />
+		<global name="itemdef_armor_vector" object="world" member="raws.itemdefs.armor" />
+		<global name="itemdef_ammo_vector" object="world" member="raws.itemdefs.ammo" />
+		<global name="itemdef_siegeammo_vector" object="world" member="raws.itemdefs.siege_ammo" />
+		<global name="itemdef_glove_vector" object="world" member="raws.itemdefs.gloves" />
+		<global name="itemdef_shoe_vector" object="world" member="raws.itemdefs.shoes" />
+		<global name="itemdef_shield_vector" object="world" member="raws.itemdefs.shields" />
+		<global name="itemdef_helm_vector" object="world" member="raws.itemdefs.helms" />
+		<global name="itemdef_pant_vector" object="world" member="raws.itemdefs.pants" />
+		<global name="itemdef_food_vector" object="world" member="raws.itemdefs.food" />
+		<global name="language_vector" object="world" member="raws.language.words" />
+		<global name="translation_vector" object="world" member="raws.language.translations" />
+		<global name="colors_vector" object="world" member="raws.language.colors" />
+		<global name="shapes_vector" object="world" member="raws.language.shapes" />
+		<global name="reactions_vector" object="world" member="raws.reactions" />
+		<global name="base_materials" object="world" member="raws.mat_table.builtin" />
+		<global name="all_syndromes_vector" object="world" member="raws.syndromes.all" />
+		<global name="events_vector" object="world" member="history.events" />
+		<global name="historical_figures_vector" object="world" member="history.figures" />
+		<offset name="world_site_type" type="world_site" member="type" />
+		<offset name="active_sites_vector" type="world_data" member="active_site" />
+		<global name="gview" object="gview" />
+		<vtable name="viewscreen_setupdwarfgame_vtable" type="viewscreen_setupdwarfgamest" />
+	</section>
+	<section name="offsets">
+		<offset name="word_table" type="language_translation" member="words" />
+	</section>
+	<section name="word_offsets">
+		<offset name="base" type="language_word" member="word" />
+		<offset name="noun_singular" type="language_word" member="forms" index="Noun" />
+		<offset name="noun_plural" type="language_word" member="forms" index="NounPlural" />
+		<offset name="adjective" type="language_word" member="forms" index="Adjective" />
+		<offset name="verb" type="language_word" member="forms" index="Verb" />
+		<offset name="present_simple_verb" type="language_word" member="forms" index="Verb3rdPerson" />
+		<offset name="past_simple_verb" type="language_word" member="forms" index="VerbPast" />
+		<offset name="past_participle_verb" type="language_word" member="forms" index="VerbPassive" />
+		<offset name="present_participle_verb" type="language_word" member="forms" index="VerbGerund" />
+		<offset name="first_name" type="language_name" member="first_name" />
+		<offset name="nickname" type="language_name" member="nickname" />
+		<offset name="words" type="language_name" member="words" />
+		<offset name="word_type" type="language_name" member="parts_of_speech" />
+		<offset name="language_id" type="language_name" member="language" />
+	</section>
+	<section name="general_ref_offsets">
+		<vmethod name="ref_type" type="general_ref" method="getType" />
+		<offset name="artifact_id" type="general_ref_artifact" member="artifact_id" />
+		<offset name="item_id" type="general_ref_item" member="item_id" />
+	</section>
+	<section name="race_offsets">
+		<offset name="name_singular" type="creature_raw" member="name" index="0" />
+		<offset name="name_plural" type="creature_raw" member="name" index="1" />
+		<offset name="adjective" type="creature_raw" member="name" index="2" />
+		<offset name="baby_name_singular" type="creature_raw" member="general_baby_name" index="0" />
+		<offset name="baby_name_plural" type="creature_raw" member="general_baby_name" index="1" />
+		<offset name="child_name_singular" type="creature_raw" member="general_child_name" index="0" />
+		<offset name="child_name_plural" type="creature_raw" member="general_child_name" index="1" />
+		<offset name="pref_string_vector" type="creature_raw" member="prefstring" />
+		<offset name="castes_vector" type="creature_raw" member="caste" />
+		<offset name="pop_ratio_vector" type="creature_raw" member="pop_ratio" />
+		<offset name="materials_vector" type="creature_raw" member="material" />
+		<offset name="flags" type="creature_raw" member="flags" />
+		<offset name="tissues_vector" type="creature_raw" member="tissue" />
+	</section>
+	<section name="caste_offsets">
+		<offset name="caste_name" type="caste_raw" member="caste_name" />
+		<offset name="caste_descr" type="caste_raw" member="description" />
+		<offset name="caste_trait_ranges" type="caste_raw" member="personality.a" />
+		<offset name="caste_phys_att_ranges" type="caste_raw" member="attributes.phys_att_range" />
+		<offset name="baby_age" type="caste_raw" member="misc.baby_age" />
+		<offset name="child_age" type="caste_raw" member="misc.child_age" />
+		<offset name="adult_size" type="caste_raw" member="misc.adult_size" />
+		<offset name="flags" type="caste_raw" member="flags" />
+		<offset name="body_info" type="caste_raw" member="body_info" />
+		<offset name="skill_rates" type="caste_raw" member="skill_rates" />
+		<offset name="caste_att_rates" type="caste_raw" member="attributes.phys_att_rates" />
+		<offset name="caste_att_caps" type="caste_raw" member="attributes.phys_att_cap_perc" />
+		<offset name="shearable_tissues_vector" type="caste_raw" member="shearable_tissue_layer" />
+		<offset name="extracts" type="caste_raw" member="extracts.extract_matidx" />
+	</section>
+	<section name="hist_entity_offsets">
+		<offset name="histfigs" type="historical_entity" member="histfig_ids" />
+		<offset name="beliefs" type="historical_entity" member="resources.values" />
+		<offset name="squads" type="historical_entity" member="squads" />
+		<offset name="positions" type="historical_entity" member="positions.own" />
+		<offset name="assignments" type="historical_entity" member="positions.assignments" />
+		<offset name="assign_hist_id" type="entity_position_assignment" member="histfig" />
+		<offset name="assign_position_id" type="entity_position_assignment" member="position_id" />
+		<offset name="position_id" type="entity_position" member="id" />
+		<offset name="position_name" type="entity_position" member="name" />
+		<offset name="position_female_name" type="entity_position" member="name_female" />
+		<offset name="position_male_name" type="entity_position" member="name_male" />
+	</section>
+	<section name="hist_figure_offsets">
+		<offset name="hist_race" type="historical_figure" member="race" />
+		<offset name="hist_name" type="historical_figure" member="name" />
+		<offset name="id" type="historical_figure" member="id" />
+		<offset name="hist_fig_info" type="historical_figure" member="info" />
+		<offset name="reputation" type="historical_figure_info" member="reputation" />
+		<offset name="current_ident" type="historical_figure_info.reputation" member="cur_identity" />
+		<offset name="fake_name" type="identity" member="name" />
+		<offset name="fake_birth_year" type="identity" member="birth_year" />
+		<offset name="fake_birth_time" type="identity" member="birth_second" />
+		<offset name="kills" type="historical_figure_info" member="kills" />
+		<offset name="killed_race_vector" type="historical_kills" member="killed_race" />
+		<offset name="killed_undead_vector" type="historical_kills" member="killed_undead" />
+		<offset name="killed_counts_vector" type="historical_kills" member="killed_count" />
+	</section>
+	<section name="hist_event_offsets">
+		<offset name="event_year" type="history_event" member="year" />
+		<offset name="id" type="history_event" member="id" />
+		<offset name="killed_hist_id" type="history_event_hist_figure_diedst" member="victim_hf" />
+	</section>
+	<section name="item_offsets">
+		<offset name="item_def" type="item_ammost" member="subtype" />
+		<offset name="id" type="item" member="id" />
+		<offset name="general_refs" type="item" member="general_refs" />
+		<offset name="stack_size" type="item_actual" member="stack_size" />
+		<offset name="wear" type="item_actual" member="wear" />
+		<offset name="mat_type" type="item_crafted" member="mat_type" />
+		<offset name="mat_index" type="item_crafted" member="mat_index" />
+		<offset name="maker_race" type="item_crafted" member="maker_race" />
+		<offset name="quality" type="item_crafted" member="quality" />
+		<offset name="artifact_id" type="artifact_record" member="id" />
+		<offset name="artifact_name" type="artifact_record" member="name" />
+	</section>
+	<section name="item_subtype_offsets">
+		<offset name="sub_type" type="itemdef" member="subtype" />
+		<offset name="base_flags" type="itemdef" member="base_flags" />
+		<offset name="name" type="itemdef_armorst" member="name" />
+		<offset name="name_plural" type="itemdef_armorst" member="name_plural" />
+		<offset name="adjective" type="itemdef_armorst" member="name_preplural" />
+		<offset name="tool_flags" type="itemdef_toolst" member="flags" />
+		<offset name="tool_adjective" type="itemdef_toolst" member="adjective" />
+	</section>
+	<section name="item_filter_offsets">
+		<offset name="item_subtype" type="item_filter_spec" member="item_subtype" />
+		<offset name="mat_class" type="item_filter_spec" member="material_class" />
+		<offset name="mat_type" type="item_filter_spec" member="mattype" />
+		<offset name="mat_index" type="item_filter_spec" member="matindex" />
+	</section>
+	<section name="weapon_subtype_offsets">
+		<offset name="single_size" type="itemdef_weaponst" member="two_handed" />
+		<offset name="multi_size" type="itemdef_weaponst" member="minimum_size" />
+		<offset name="ammo" type="itemdef_weaponst" member="ranged_ammo" />
+		<offset name="melee_skill" type="itemdef_weaponst" member="skill_melee" />
+		<offset name="ranged_skill" type="itemdef_weaponst" member="skill_ranged" />
+	</section>
+	<section name="armor_subtype_offsets">
+		<offset name="layer" type="armor_properties" member="layer" />
+		<offset name="mat_name" type="itemdef_armorst" member="material_placeholder" />
+		<offset name="other_armor_level" type="itemdef_helmst" member="armorlevel" />
+		<offset name="armor_adjective" type="itemdef_armorst" member="adjective" />
+		<offset name="armor_level" type="itemdef_armorst" member="armorlevel" />
+		<offset name="chest_armor_properties" type="itemdef_armorst" member="props" />
+		<offset name="pants_armor_properties" type="itemdef_pantsst" member="props" />
+		<offset name="other_armor_properties" type="itemdef_helmst" member="props" />
+	</section>
+	<section name="material_offsets">
+		<offset name="solid_name" type="material_common" member="state_name" index="Solid" />
+		<offset name="liquid_name" type="material_common" member="state_name" index="Liquid" />
+		<offset name="gas_name" type="material_common" member="state_name" index="Gas" />
+		<offset name="powder_name" type="material_common" member="state_name" index="Powder" />
+		<offset name="paste_name" type="material_common" member="state_name" index="Paste" />
+		<offset name="pressed_name" type="material_common" member="state_name" index="Pressed" />
+		<offset name="flags" type="material_common" member="flags" />
+		<offset name="reaction_class" type="material_common" member="reaction_class" />
+		<offset name="prefix" type="material" member="prefix" />
+		<offset name="inorganic_materials_vector" type="inorganic_raw" member="material" />
+		<offset name="inorganic_flags" type="inorganic_raw" member="flags" />
+	</section>
+	<section name="plant_offsets">
+		<offset name="name" type="plant_raw" member="name" />
+		<offset name="name_plural" type="plant_raw" member="name_plural" />
+		<offset name="name_leaf_plural" type="plant_raw" member="leaves_plural" />
+		<offset name="name_seed_plural" type="plant_raw" member="seed_plural" />
+		<offset name="materials_vector" type="plant_raw" member="material" />
+		<offset name="flags" type="plant_raw" member="flags" />
+	</section>
+	<section name="descriptor_offsets">
+		<offset name="color_name" type="descriptor_color" member="name" />
+		<offset name="shape_name_plural" type="descriptor_shape" member="name_plural" />
+		<!--<offset name="shape_adj" type="descriptor_shape" member="adj" />-->
+	</section>
+	<section name="health_offsets">
+		<offset name="parent_id" type="body_part_raw" member="con_part_id" />
+		<offset name="body_part_flags" type="body_part_raw" member="flags" />
+		<offset name="layers_vector" type="body_part_raw" member="layers" />
+		<offset name="number" type="body_part_raw" member="number" />
+		<offset name="names_vector" type="body_part_raw" member="name_singular" />
+		<offset name="names_plural_vector" type="body_part_raw" member="name_plural" />
+		<offset name="layer_tissue" type="body_part_layer_raw" member="tissue_id" />
+		<offset name="layer_global_id" type="body_part_layer_raw" member="layer_id" />
+		<offset name="tissue_name" type="tissue_template" member="tissue_name_singular" />
+		<offset name="tissue_flags" type="tissue_template" member="flags" />
+	</section>
+	<section name="dwarf_offsets">
+		<offset name="name" type="unit" member="name" />
+		<offset name="custom_profession" type="unit" member="custom_profession" />
+		<offset name="profession" type="unit" member="profession" />
+		<offset name="race" type="unit" member="race" />
+		<offset name="flags1" type="unit" member="flags1" />
+		<offset name="flags2" type="unit" member="flags2" />
+		<offset name="flags3" type="unit" member="flags3" />
+		<offset name="meeting" type="unit" member="meeting" />
+		<offset name="caste" type="unit" member="caste" />
+		<offset name="sex" type="unit" member="sex" />
+		<offset name="id" type="unit" member="id" />
+		<offset name="animal_type" type="unit" member="training_level" />
+		<offset name="civ" type="unit" member="civ_id" />
+		<offset name="specific_refs" type="unit" member="specific_refs" />
+		<offset name="squad_id" type="unit" member="military.squad_id" />
+		<offset name="squad_position" type="unit" member="military.squad_position" />
+		<offset name="recheck_equipment" type="unit" member="military.pickup_flags" />
+		<offset name="mood" type="unit" member="mood" />
+		<offset name="birth_year" type="unit" member="relations.birth_year" />
+		<offset name="birth_time" type="unit" member="relations.birth_time" />
+		<offset name="pet_owner_id" type="unit" member="relations.pet_owner_id" />
+		<offset name="current_job" type="unit" member="job.current_job" />
+		<offset name="physical_attrs" type="unit" member="body.physical_attrs" />
+		<offset name="body_size" type="unit" member="appearance.body_modifiers" />
+		<offset name="size_info" type="unit" member="body.size_info.size_cur" />
+		<offset name="size_base" type="unit" member="body.size_info.size_base" />
+		<offset name="curse" type="unit" member="curse.name" />
+		<offset name="curse_add_flags1" type="unit" member="curse.add_tags1" />
+		<offset name="turn_count" type="unit" member="curse.time_on_site" />
+		<offset name="souls" type="unit" member="status.souls" />
+		<offset name="states" type="unit" member="status.misc_traits" />
+		<offset name="labors" type="unit" member="status.labors" />
+		<offset name="hist_id" type="unit" member="hist_figure_id" />
+		<offset name="artifact_name" type="unit" member="status.artifact_name" />
+		<offset name="active_syndrome_vector" type="unit" member="syndromes.active" />
+		<offset name="syn_sick_flag" type="unit_syndrome" member="flags" />
+		<offset name="unit_health_info" type="unit" member="health" />
+		<offset name="temp_mood" type="unit" member="counters.soldier_mood" />
+		<offset name="counters1" type="unit" member="counters.winded" />
+		<offset name="counters2" type="unit" member="counters.pain" />
+		<offset name="counters3" type="unit" member="counters2.paralysis" />
+		<offset name="limb_counters" type="unit" member="status2.limbs_stand_max" />
+		<offset name="blood" type="unit" member="body.blood_max" />
+		<offset name="body_component_info" type="unit" member="body.components" />
+		<offset name="layer_status_vector" type="body_component_info" member="layer_status" />
+		<offset name="wounds_vector" type="unit" member="body.wounds" />
+		<offset name="mood_skill" type="unit" member="job.mood_skill" />
+		<offset name="used_items_vector" type="unit" member="used_items" />
+		<offset name="affection_level" type="unit_item_use" member="affection_level" />
+		<offset name="inventory" type="unit" member="inventory" />
+		<offset name="inventory_item_mode" type="unit_inventory_item" member="mode" />
+		<offset name="inventory_item_bodypart" type="unit_inventory_item" member="body_part_id" />
+	</section>
+	<section name="syndrome_offsets">
+		<offset name="cie_effects" type="syndrome" member="ce" />
+		<offset name="cie_end" type="creature_interaction_effect" member="end" />
+		<offset name="cie_first_perc" type="creature_interaction_effect_phys_att_changest" member="phys_att_perc" />
+		<offset name="cie_phys" type="creature_interaction_effect_phys_att_changest" member="phys_att_add" />
+		<offset name="cie_ment" type="creature_interaction_effect_ment_att_changest" member="ment_att_add" />
+		<offset name="syn_classes_vector" type="syndrome" member="syn_class" />
+		<offset name="trans_race_id" type="creature_interaction_effect_body_transformationst" member="race" />
+	</section>
+	<section name="unit_wound_offsets">
+		<offset name="parts" type="unit_wound" member="parts" />
+		<offset name="id" type="unit_wound.parts" member="body_part_id" />
+		<offset name="layer" type="unit_wound.parts" member="layer_idx" />
+		<offset name="general_flags" type="unit_wound" member="flags" />
+		<offset name="flags1" type="unit_wound.parts" member="flags1" />
+		<offset name="flags2" type="unit_wound.parts" member="flags2" />
+		<offset name="effects_vector" type="unit_wound.parts" member="effect_type" />
+		<offset name="bleeding" type="unit_wound.parts" member="bleeding" />
+		<offset name="pain" type="unit_wound.parts" member="pain" />
+		<offset name="cur_pen" type="unit_wound.parts" member="cur_penetration_perc" />
+		<offset name="max_pen" type="unit_wound.parts" member="max_penetration_perc" />
+	</section>
+	<section name="soul_details">
+		<offset name="name" type="unit_soul" member="name" />
+		<offset name="orientation" type="unit_soul" member="orientation_flags" />
+		<offset name="mental_attrs" type="unit_soul" member="mental_attrs" />
+		<offset name="skills" type="unit_soul" member="skills" />
+		<offset name="preferences" type="unit_soul" member="preferences" />
+		<offset name="personality" type="unit_soul" member="personality" />
+		<offset name="beliefs" type="unit_personality" member="values" />
+		<offset name="emotions" type="unit_personality" member="emotions" />
+		<offset name="goals" type="unit_personality" member="dreams" />
+		<offset name="goal_realized" type="unit_personality.dreams" member="unk8" />
+		<offset name="traits" type="unit_personality" member="traits" />
+		<offset name="stress_level" type="unit_personality" member="stress_level" />
+		<offset name="needs" type="unit_personality" member="needs" />
+		<offset name="current_focus" type="unit_personality" member="current_focus" />
+		<offset name="undistracted_focus" type="unit_personality" member="undistracted_focus" />
+		<offset name="combat_hardened" type="unit_personality" member="combat_hardened" />
+		<offset name="likes_outdoors" type="unit_personality" member="likes_outdoors" />
+	</section>
+	<section name="need_offsets">
+		<offset name="id" type="unit_personality.needs" member="id" />
+		<offset name="deity_id" type="unit_personality.needs" member="deity_id" />
+		<offset name="focus_level" type="unit_personality.needs" member="focus_level" />
+		<offset name="need_level" type="unit_personality.needs" member="need_level" />
+	</section>
+	<section name="emotion_offsets">
+		<offset name="emotion_type" type="unit_personality.emotions" member="type" />
+		<offset name="strength" type="unit_personality.emotions" member="strength" />
+		<offset name="thought_id" type="unit_personality.emotions" member="thought" />
+		<offset name="sub_id" type="unit_personality.emotions" member="subthought" />
+		<offset name="level" type="unit_personality.emotions" member="severity" />
+		<offset name="year" type="unit_personality.emotions" member="year" />
+		<offset name="year_tick" type="unit_personality.emotions" member="year_tick" />
+	</section>
+	<section name="job_details">
+		<offset name="id" type="job" member="job_type" />
+		<offset name="mat_type" type="job" member="mat_type" />
+		<offset name="mat_index" type="job" member="mat_index" />
+		<offset name="mat_category" type="job" member="material_category" />
+		<offset name="sub_job_id" type="job" member="reaction_name" />
+		<offset name="reaction" type="reaction" member="name" />
+		<offset name="reaction_skill" type="reaction" member="skill" />
+	</section>
+	<section name="squad_offsets">
+		<offset name="id" type="squad" member="id" />
+		<offset name="name" type="squad" member="name" />
+		<offset name="alias" type="squad" member="alias" />
+		<offset name="members" type="squad" member="positions" />
+		<offset name="orders" type="squad" member="orders" />
+		<offset name="schedules" type="squad" member="schedule" />
+		<size name="sched_size" type="squad_schedule_entry" />
+		<offset name="sched_orders" type="squad_schedule_entry" member="orders" />
+		<offset name="sched_assign" type="squad_schedule_entry" member="order_assignments" />
+		<offset name="alert" type="squad" member="cur_alert_idx" />
+		<offset name="carry_food" type="squad" member="carry_food" />
+		<offset name="carry_water" type="squad" member="carry_water" />
+		<offset name="ammunition" type="squad" member="ammunition" />
+		<offset name="ammunition_qty" type="squad_ammo_spec" member="amount" />
+		<offset name="quiver" type="squad_position" member="quiver" />
+		<offset name="backpack" type="squad_position" member="backpack" />
+		<offset name="flask" type="squad_position" member="flask" />
+		<offset name="armor_vector" type="squad_position" member="uniform" index="body" />
+		<offset name="helm_vector" type="squad_position" member="uniform" index="head" />
+		<offset name="pants_vector" type="squad_position" member="uniform" index="pants" />
+		<offset name="gloves_vector" type="squad_position" member="uniform" index="gloves" />
+		<offset name="shoes_vector" type="squad_position" member="uniform" index="shoes" />
+		<offset name="shield_vector" type="squad_position" member="uniform" index="shield" />
+		<offset name="weapon_vector" type="squad_position" member="uniform" index="weapon" />
+		<offset name="uniform_item_filter" type="squad_uniform_spec" member="item_filter" />
+		<offset name="uniform_indiv_choice" type="squad_uniform_spec" member="indiv_choice" />
+	</section>
+	<section name="activity_offsets">
+		<offset name="activity_type" type="activity_entry" member="type" />
+		<offset name="events" type="activity_entry" member="events" />
+		<offset name="participants" type="activity_event_combat_trainingst" member="participants" />
+		<offset name="sq_lead" type="activity_event_skill_demonstrationst" member="hist_figure_id" />
+		<offset name="sq_skill" type="activity_event_skill_demonstrationst" member="skill" />
+		<offset name="sq_train_rounds" type="activity_event_skill_demonstrationst" member="train_rounds" />
+		<offset name="pray_deity" type="activity_event_prayerst" member="histfig_id" />
+		<offset name="pray_sphere" type="activity_event_prayerst" member="topic" />
+		<offset name="knowledge_category" type="activity_event_ponder_topicst" member="knowledge_category" />
+		<offset name="knowledge_flag" type="activity_event_ponder_topicst" member="knowledge_flag" />
+		<offset name="perf_type" type="activity_event_performancest" member="type" />
+		<offset name="perf_participants" type="activity_event_performancest" member="participant_actions" />
+		<offset name="perf_histfig" type="activity_event_performancest.participant_actions" member="histfig_id" />
+	</section>
+	<section name="art_offsets">
+		<offset name="name" type="poetic_form" member="name" />
+	</section>
+	<section name="viewscreen_offsets">
+		<offset name="view" type="interfacest" member="view" />
+		<offset name="child" type="viewscreen" member="child" />
+		<offset name="setupdwarfgame_units" type="viewscreen_setupdwarfgamest" member="units" />
+	</section>
+	<flag-array name="valid_flags_2" bitfield="unit_flags2">
+	</flag-array>
+	<flag-array name="invalid_flags_1" bitfield="unit_flags1">
+		<flag name="a skeleton" flags="skeleton" />
+		<flag name="a merchant" flags="merchant" />
+		<flag name="outpost liaison, diplomat, or artifact requesting visitor" flags="diplomat" />
+		<flag name="an invader or hostile" flags="active_invader" />
+		<flag name="an invader or hostile" flags="invader_origin" />
+		<flag name="resident, invader or ambusher" flags="hidden_ambusher|invades" />
+		<flag name="part of a merchant caravan" flags="forest" />
+		<flag name="Dead, Jim." flags="dead" />
+		<flag name="marauder" flags="marauder" />
+	</flag-array>
+	<flag-array name="invalid_flags_2" bitfield="unit_flags2">
+		<flag name="killed, Jim." flags="killed" />
+		<flag name="from the Underworld. SPOOKY!" flags="underworld" />
+		<flag name="resident" flags="resident" />
+		<flag name="uninvited visitor" flags="visitor_uninvited" />
+		<flag name="visitor" flags="visitor" />
+	</flag-array>
+	<flag-array name="invalid_flags_3" bitfield="unit_flags3">
+		<flag name="a ghost" flags="ghostly" />
+	</flag-array>
+</memory-layout>

@@ -1,0 +1,3 @@
+[submodule "external/libdfs"]
+	path = external/libdfs
+	url = https://github.com/cvuchener/libdfs.git
