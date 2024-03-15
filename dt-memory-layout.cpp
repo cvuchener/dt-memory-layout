@@ -134,7 +134,7 @@ static bool print_section(const Structures &structures, const Structures::Versio
 				ok = false;
 			}
 			else {
-				print_value(entry_name, vtable_index * abi.pointer().size);
+				print_value(entry_name, vtable_index * abi.pointer.size);
 			}
 		}
 		else if (name == "value") {
