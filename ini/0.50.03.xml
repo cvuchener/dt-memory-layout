@@ -173,12 +173,6 @@
 		<offset name="tool_flags" type="itemdef_toolst" member="flags" />
 		<offset name="tool_adjective" type="itemdef_toolst" member="adjective" />
 	</section>
-	<section name="item_filter_offsets">
-		<offset name="item_subtype" type="item_filter_spec" member="item_subtype" />
-		<offset name="mat_class" type="item_filter_spec" member="material_class" />
-		<offset name="mat_type" type="item_filter_spec" member="mattype" />
-		<offset name="mat_index" type="item_filter_spec" member="matindex" />
-	</section>
 	<section name="weapon_subtype_offsets">
 		<offset name="single_size" type="itemdef_weaponst" member="two_handed" />
 		<offset name="multi_size" type="itemdef_weaponst" member="minimum_size" />
@@ -378,7 +372,11 @@
 		<offset name="shoes_vector" type="squad_position" member="uniform[shoes]" />
 		<offset name="shield_vector" type="squad_position" member="uniform[shield]" />
 		<offset name="weapon_vector" type="squad_position" member="uniform[weapon]" />
-		<offset name="uniform_item_filter" type="squad_uniform_spec" member="item_filter" />
+		<offset name="uniform_spec_uniform_item_filter" type="squad_uniform_spec" member="item_filter.item_type" />
+		<offset name="uniform_spec_item_subtype" type="squad_uniform_spec" member="item_filter.item_subtype" />
+		<offset name="uniform_spec_mat_class" type="squad_uniform_spec" member="item_filter.material_class" />
+		<offset name="uniform_spec_mat_type" type="squad_uniform_spec" member="item_filter.mattype" />
+		<offset name="uniform_spec_mat_index" type="squad_uniform_spec" member="item_filter.matindex" />
 		<offset name="uniform_indiv_choice" type="squad_uniform_spec" member="indiv_choice" />
 		<offset name="equipment_update" type="squad" member="ammo.unk_v50_1" />
 	</section>

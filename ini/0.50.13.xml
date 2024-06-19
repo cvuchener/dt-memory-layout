@@ -59,7 +59,7 @@
 		<offset name="world_site_type" type="world_site" member="type" />
 		<offset name="active_sites_vector" type="world_data" member="active_site" />
 		<global name="gview" object="gview" />
-		<global name="external_flag" object="game_extra.external_flag" />
+		<global name="external_flag" object="game.external_flag" />
 		<global name="global_equipment_update" object="plotinfo.equipment.update" />
 		<vtable name="viewscreen_setupdwarfgame_vtable" type="viewscreen_setupdwarfgamest" />
 	</section>
@@ -105,7 +105,7 @@
 	<section name="caste_offsets">
 		<offset name="caste_name" type="caste_raw" member="caste_name" />
 		<offset name="caste_descr" type="caste_raw" member="description" />
-		<offset name="caste_trait_ranges" type="caste_raw" member="personality.a" />
+		<offset name="caste_trait_ranges" type="caste_raw" member="personality.min" />
 		<offset name="caste_phys_att_ranges" type="caste_raw" member="attributes.phys_att_range" />
 		<offset name="baby_age" type="caste_raw" member="misc.baby_age" />
 		<offset name="child_age" type="caste_raw" member="misc.child_age" />
@@ -245,11 +245,11 @@
 		<offset name="specific_refs" type="unit" member="specific_refs" />
 		<offset name="squad_id" type="unit" member="military.squad_id" />
 		<offset name="squad_position" type="unit" member="military.squad_position" />
-		<offset name="recheck_equipment" type="unit" member="military.pickup_flags" />
+		<offset name="recheck_equipment" type="unit" member="uniform.pickup_flags" />
 		<offset name="mood" type="unit" member="mood" />
 		<offset name="birth_year" type="unit" member="birth_year" />
 		<offset name="birth_time" type="unit" member="birth_time" />
-		<offset name="pet_owner_id" type="unit" member="relationship_ids[Pet]" />
+		<offset name="pet_owner_id" type="unit" member="relationship_ids[PetOwner]" />
 		<offset name="current_job" type="unit" member="job.current_job" />
 		<offset name="physical_attrs" type="unit" member="body.physical_attrs" />
 		<offset name="body_size" type="unit" member="appearance.body_modifiers" />
@@ -331,7 +331,7 @@
 	</section>
 	<section name="emotion_offsets">
 		<offset name="emotion_type" type="unit_personality.emotions" member="type" />
-		<offset name="strength" type="unit_personality.emotions" member="strength" />
+		<offset name="strength" type="unit_personality.emotions" member="relative_strength" />
 		<offset name="thought_id" type="unit_personality.emotions" member="thought" />
 		<offset name="sub_id" type="unit_personality.emotions" member="subthought" />
 		<offset name="level" type="unit_personality.emotions" member="severity" />
@@ -358,25 +358,25 @@
 		<offset name="sched_orders" type="squad_schedule_entry" member="orders" />
 		<offset name="sched_assign" type="squad_schedule_entry" member="order_assignments" />
 		<offset name="alert" type="squad" member="cur_routine_idx" />
-		<offset name="carry_food" type="squad" member="carry_food" />
-		<offset name="carry_water" type="squad" member="carry_water" />
+		<offset name="carry_food" type="squad" member="supplies.carry_food" />
+		<offset name="carry_water" type="squad" member="supplies.carry_water" />
 		<offset name="ammunition" type="squad" member="ammo.ammunition" />
 		<offset name="ammunition_qty" type="squad_ammo_spec" member="amount" />
-		<offset name="quiver" type="squad_position" member="quiver" />
-		<offset name="backpack" type="squad_position" member="backpack" />
-		<offset name="flask" type="squad_position" member="flask" />
-		<offset name="armor_vector" type="squad_position" member="uniform[body]" />
-		<offset name="helm_vector" type="squad_position" member="uniform[head]" />
-		<offset name="pants_vector" type="squad_position" member="uniform[pants]" />
-		<offset name="gloves_vector" type="squad_position" member="uniform[gloves]" />
-		<offset name="shoes_vector" type="squad_position" member="uniform[shoes]" />
-		<offset name="shield_vector" type="squad_position" member="uniform[shield]" />
-		<offset name="weapon_vector" type="squad_position" member="uniform[weapon]" />
-		<offset name="uniform_spec_uniform_item_filter" type="squad_uniform_spec" member="item_filter.item_type" />
-		<offset name="uniform_spec_item_subtype" type="squad_uniform_spec" member="item_filter.item_subtype" />
-		<offset name="uniform_spec_mat_class" type="squad_uniform_spec" member="item_filter.material_class" />
-		<offset name="uniform_spec_mat_type" type="squad_uniform_spec" member="item_filter.mattype" />
-		<offset name="uniform_spec_mat_index" type="squad_uniform_spec" member="item_filter.matindex" />
+		<offset name="quiver" type="squad_position" member="equipment.quiver" />
+		<offset name="backpack" type="squad_position" member="equipment.backpack" />
+		<offset name="flask" type="squad_position" member="equipment.flask" />
+		<offset name="armor_vector" type="squad_position" member="equipment.uniform[body]" />
+		<offset name="helm_vector" type="squad_position" member="equipment.uniform[head]" />
+		<offset name="pants_vector" type="squad_position" member="equipment.uniform[pants]" />
+		<offset name="gloves_vector" type="squad_position" member="equipment.uniform[gloves]" />
+		<offset name="shoes_vector" type="squad_position" member="equipment.uniform[shoes]" />
+		<offset name="shield_vector" type="squad_position" member="equipment.uniform[shield]" />
+		<offset name="weapon_vector" type="squad_position" member="equipment.uniform[weapon]" />
+		<offset name="uniform_spec_item_type" type="squad_uniform_spec" member="item_type" />
+		<offset name="uniform_spec_item_subtype" type="squad_uniform_spec" member="item_subtype" />
+		<offset name="uniform_spec_mat_class" type="squad_uniform_spec" member="material_class" />
+		<offset name="uniform_spec_mat_type" type="squad_uniform_spec" member="mattype" />
+		<offset name="uniform_spec_mat_index" type="squad_uniform_spec" member="matindex" />
 		<offset name="uniform_indiv_choice" type="squad_uniform_spec" member="indiv_choice" />
 		<offset name="equipment_update" type="squad" member="ammo.update" />
 	</section>
@@ -389,8 +389,8 @@
 		<offset name="sq_train_rounds" type="activity_event_skill_demonstrationst" member="train_rounds" />
 		<offset name="pray_deity" type="activity_event_prayerst" member="histfig_id" />
 		<offset name="pray_sphere" type="activity_event_prayerst" member="topic" />
-		<offset name="knowledge_category" type="activity_event_ponder_topicst" member="knowledge.flag_type" />
-		<offset name="knowledge_flag" type="activity_event_ponder_topicst" member="knowledge.flag_data" />
+		<offset name="knowledge_category" type="activity_event_ponder_topicst" member="topic.research.flag_type" />
+		<offset name="knowledge_flag" type="activity_event_ponder_topicst" member="topic.research.flag_data" />
 		<offset name="perf_type" type="activity_event_performancest" member="type" />
 		<offset name="perf_participants" type="activity_event_performancest" member="participant_actions" />
 		<offset name="perf_histfig" type="activity_event_performancest.participant_actions" member="histfig_id" />
@@ -406,7 +406,6 @@
 	<flag-array name="valid_flags_2" bitfield="unit_flags2">
 	</flag-array>
 	<flag-array name="invalid_flags_1" bitfield="unit_flags1">
-		<flag name="a skeleton" flags="skeleton" />
 		<flag name="a merchant" flags="merchant" />
 		<flag name="outpost liaison, diplomat, or artifact requesting visitor" flags="diplomat" />
 		<flag name="an invader or hostile" flags="active_invader" />
