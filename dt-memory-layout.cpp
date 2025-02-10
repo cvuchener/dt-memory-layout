@@ -79,7 +79,17 @@ static bool print_section(const Structures &structures, const Structures::Versio
 		const Compound *type = nullptr;
 		if (auto type_attr = child.attribute("type")) {
 			std::string_view type_name = type_attr.value();
-			type = structures.findCompound(parse_path(type_name));
+			try {
+				type = structures.findCompound(parse_path(type_name));
+			}
+			catch (std::exception &e) {
+				std::cerr << std::format("type {} not found for entry {}: {}.\n",
+						type_attr.value(),
+						entry_name,
+						e.what());
+				ok = false;
+				continue;
+			}
 			if (!type) {
 				std::cerr << std::format("type {} not found for entry {}.\n",
 						type_attr.value(),
